@@ -38,6 +38,17 @@ ul li {
   color:#eee;
 }
 
+span {
+float: right;
+}
+
+span:hover { 
+    color: #FF6666;
+}
+
+
+
+
 #add_todo{
   margin-left:10px;
   background:#FF6666;

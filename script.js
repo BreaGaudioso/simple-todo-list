@@ -1,11 +1,19 @@
 var input = document.getElementById("submit");
-var list = document.querySelector('ul');
+var ul = document.querySelector('ul');
 var form = document.querySelector("form")
 
 form.addEventListener("submit", function(e){
   e.preventDefault();
-	li = document.createElement('li');
-	list.appendChild(li)
-	li.innerHTML= input.value;
+  li = document.createElement('li');
+	ul.appendChild(li)
+	li.innerHTML= input.value + '<span> delete</span>' ;
+	input.value= " "
 });
 
+ul.addEventListener('click', function(e){
+	if (e.target.nodeName === 'LI'){
+		e.target.className ='completed';
+	} else {
+		ul.removeChild(e.target.parentNode)
+}
+});
